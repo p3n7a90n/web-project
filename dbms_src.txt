@@ -148,3 +148,9 @@ insert into s4 values(23,"What is the basic function of paging?",3,10);
 insert into s4 values(24,"What is fragmentation?",3,10);
 insert into s4 values(25," How does swapping result in better memory management??",3,10);
 
+create table evaluation (usn char(10),marks int(11),subject varchar(10));
+create table teacher  (usn char(10), name varchar(30), password varchar(30),subject varchar(20), primary key (usn));
+create table students  (usn char(10), name varchar(30), password varchar(30), primary key (usn));
+create table answers (usn char(10),subject varchar (20),qno int(11),date varchar(100),answers varchar (100),marks int(11),foreign key(qno) references s1(qno) on delete cascade on update cascade);
+
+
